@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+  <input type="file" name="image" accept="image/png, image/jpg">
+  <p></p>
+  <button type="submit">送信</button>
+  ※送信ボタン押下後、しばらくお待ち下さい
+</form>
+
+<div>
+  <img src="{{ filename }}" style="margin-top: 10px; vertical-align: bottom; width: 200px;">
+  <p></p>
+  {{ message }}
+</div>
+
+{% endblock %}
